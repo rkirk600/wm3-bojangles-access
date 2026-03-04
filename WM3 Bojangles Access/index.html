@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bojangles</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+      }
+      #video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+      #form-container {
+        position: fixed;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: 'Bold Courier New', sans-serif;  
+        color: #fff; 
+        font-size: 50px;
+        margin-top: 100px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+      }
+      #password-input {
+        width: 530px;
+        height: 50px;
+        font-size: 24px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      #submit-button {
+        background: #666;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0px 1px 1px #111111;  
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      #submit-button:hover {
+        background: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="video-background">
+      <script type="text/javascript" src="https://videosuite-player-wrapper.vercel.app/assets" async></script>
+      <div class="iv-player_responsive_padding" style="padding:56.25% 0 0 0;position:relative;" data-hash="65d8bf0e1b6da">
+        <div class="iv-player_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+          <div class="iv-player_embed iv-player_async_p2z7746nud videoFoam=true" style="height:100%;position:relative;width:100%">
+            <div class="iv-player_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;width:100%;">
+              <img 
+                src="https://vz-5b49b1a0-718.b-cdn.net/39565f2c-aaac-44bb-8f29-e953c5fe9807/thumbnail.jpg" 
+                style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" 
+                alt="" aria-hidden="true" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="form-container">
+      <form id="password-form" onsubmit="return checkPassword(event);">
+        <label for="password-input">Who Are You Looking For?</label><br>
+        <input type="text" id="password-input" name="password" autofocus placeholder="Enter Full Name"><br>
+        <button type="submit" id="submit-button">Submit</button>
+      </form>
+    </div>
+    <script>
+      function checkPassword(event) {
+        event.preventDefault();  // Prevents default form submission
+
+        var password = document.getElementById("password-input").value.toLowerCase(); // Convert input to lowercase
+        if (password === "marty king") {
+          window.open("https://wm3bojangles.netlify.app/", "_blank");
+        } else if (password === "67534") {
+          window.open("https://sites.google.com/shelbyed.org/regency-retirement-home/license-access", "_blank");
+        } else if (password === "green") {
+          window.open("https://sites.google.com/shelbyed.org/gas-chromatography/green-fiber-processing", "_blank");
+        } else {
+          window.open("accessdenied2026.netlify.app", "_blank");
+        }
+      }
+    </script>
+  </body>
+</html>
